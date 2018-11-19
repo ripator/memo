@@ -1,0 +1,87 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	background-color: #30336b;
+}
+.memory-game {
+	width: 500px;
+	height: 500px;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	perspective: 1000px;
+}
+.memory-card {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	margin: 5px;
+	transform: scale(1);
+	transform-style: preserve-3d;
+	transition: transform .5s;
+}
+.memory-card:active {
+	transform: scale(.97);
+	transition: transform .2s;
+}
+.memory-card.flip {
+	transform: rotateY(180deg); 
+}
+.front-face {
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	position: absolute;
+	border-radius: 5px;	
+	transform: rotateY(180deg);
+}
+
+.back-face {
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	position: absolute;
+	border-radius: 5px;
+	border: 1px solid #58B19F;
+	background-color: #535c68;
+	backface-visibility: hidden;
+}
+.btn1-ff,
+.btn16-ff {
+	background-color: #e67e22;
+}
+.btn2-ff,
+.btn15-ff {
+	background-color: #8e44ad;
+}
+.btn3-ff,
+.btn14-ff {
+	background-color: #27ae60;
+}
+.btn4-ff,
+.btn13-ff {
+	background-color: #f39c12;
+}
+.btn5-ff,
+.btn12-ff {
+	background-color: #16a085;
+}
+.btn6-ff,
+.btn11-ff {
+	background-color: #6F1E51;
+}
+.btn7-ff,
+.btn10-ff {
+	background-color: #EA2027;
+}
+.btn8-ff,
+.btn9-ff {
+	background-color: #FDA7DF;
+
+
